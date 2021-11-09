@@ -1,29 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import UsersList from "./UsersList";
-import AddUser from "../AddUser/AddUser";
+import styles from "../UI/Card.module.css";
 
-const userData = [
-    {
-        id: "Max_01",
-        name: "Max",
-        age: 31
-    }
-];
-const Users = () => {
-    const [users, setUsers] = useState(userData);
-
-    const setAddUser = (user) => {
-        setUsers(prevUsers => {
-            return [user, ...prevUsers];
-        });
-    };
-
+const Users = (props) => {
+    
     return (
-        <div>
-            <AddUser onAddUser={setAddUser} />
-            <UsersList data={users} />
+        <div className={styles.card}>
+            <UsersList data={props.data} />
         </div>
     )
+    
 };
 
 export default Users;
