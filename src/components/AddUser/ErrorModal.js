@@ -9,7 +9,7 @@ const ErrorModal = (props) => {
 
     return (
         <div>
-            <div className={styles.backdrop}></div>
+            <div className={styles.backdrop} onClick={buttonHandler}></div>
             <div className={styles.modal}>
                 <div className={styles.header}><h2>Invalid Input</h2></div>
                 <div className={styles.content}>
