@@ -55,7 +55,7 @@ const AddUser = (props) => {
                 </div>
                 <div className={styles.input}>
                     <label>Age (Years)</label>
-                    <input type="text" name="age" value={enteredAge} onChange={ageHandler} />
+                    <input type="number" name="age" value={enteredAge} onChange={ageHandler} />
                 </div>
                 <Button type="submit" label="Add User" />
             </form>

@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import Users from "./components/Users/Users";
 import AddUser from "./components/AddUser/AddUser";
 
-const userData = [
-  {
-      id: "Max_01",
-      name: "Max",
-      age: 31
-  }
-];
+const userData = [];
 
 function App() {
     const [users, setUsers] = useState(userData);
@@ -22,7 +16,7 @@ function App() {
     return (
         <div>
             <AddUser onAddUser={setAddUser} />
-            <Users data={users} />
+            {users.length > 0 && <Users data={users} />}
         </div>
     );
 }
