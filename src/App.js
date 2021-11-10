@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import Users from "./components/Users/Users";
 import AddUser from "./components/AddUser/AddUser";
 
-const userData = [];
-
 function App() {
-    const [users, setUsers] = useState(userData);
+    const [users, setUsers] = useState("");
 
     const setAddUser = (user) => {
         setUsers((prevUsers) => {
