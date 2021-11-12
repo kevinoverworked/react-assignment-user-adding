@@ -12,3 +12,5 @@ For this lesson we were encouraged to try it out on our own and then compare to 
    3. Updating the users object with the new user
 3. Lifting the state up from AddUser to App.js to you can re-render Users with new data
 4. Making form validation and dynamically setting error message.
+5. Using React Fragments to lessen the div soup.
+6. Using Portals to pull out our error modal outside of root and into it's own root elements.

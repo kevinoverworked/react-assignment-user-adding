@@ -5,9 +5,14 @@ import AddUser from "./components/Users/AddUser";
 function App() {
     const [users, setUsers] = useState([]);
 
-    const setAddUser = (user) => {
+    const setAddUser = (name, age) => {
+        const newUserData = {
+            id: name + "_" + Math.random(),
+            name: name,
+            age: parseInt(age, 10),
+        };
         setUsers((prevUsers) => {
-            return [user, ...prevUsers];
+            return [newUserData, ...prevUsers];
         });
     };
 
