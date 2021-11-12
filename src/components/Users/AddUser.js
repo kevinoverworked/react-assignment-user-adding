@@ -49,9 +49,9 @@ const AddUser = (props) => {
     return (
         <Card className={styles.input}>
             <form onSubmit={validateInputHandler}>
-                <label forName="username">Username</label>
+                <label htmlFor="username">Username</label>
                 <input type="text" name="username" value={enteredName} onChange={nameHandler} />
-                <label forName="age">Age (Years)</label>
+                <label htmlFor="age">Age (Years)</label>
                 <input type="number" name="age" value={enteredAge} onChange={ageHandler} />
                 <Button type="submit">Add User</Button>
             </form>
