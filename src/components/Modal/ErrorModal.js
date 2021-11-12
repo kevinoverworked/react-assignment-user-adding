@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../UI/Button";
-import styles from "./ErrorModal.module.css";
+import classes from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
     const buttonHandler = () => {
@@ -9,16 +9,16 @@ const ErrorModal = (props) => {
 
     return (
         <div>
-            <div className={styles.backdrop} onClick={buttonHandler}></div>
-            <div className={styles.modal}>
-                <div className={styles.header}><h2>Invalid Input</h2></div>
-                <div className={styles.content}>
+            <div className={classes.backdrop} onClick={buttonHandler}></div>
+            <div className={classes.modal}>
+                <div className={classes.header}><h2>Invalid Input</h2></div>
+                <div className={classes.content}>
                     <p>
                         {props.message}
                     </p>
                 </div>
-                <div className={styles.actions}>
-                    <Button type="button" className={styles.actions} label="Okay" onClick={buttonHandler} />
+                <div className={classes.actions}>
+                    <Button type="button" className={classes.actions} onClick={buttonHandler}>Okay</Button>
                 </div>
             </div>
         </div>

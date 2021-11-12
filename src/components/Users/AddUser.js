@@ -47,17 +47,13 @@ const AddUser = (props) => {
     };
 
     return (
-        <Card>
+        <Card className={styles.input}>
             <form onSubmit={validateInputHandler}>
-                <div className={styles.input}>
-                    <label>Username</label>
-                    <input type="text" name="username" value={enteredName} onChange={nameHandler} />
-                </div>
-                <div className={styles.input}>
-                    <label>Age (Years)</label>
-                    <input type="number" name="age" value={enteredAge} onChange={ageHandler} />
-                </div>
-                <Button type="submit" label="Add User" />
+                <label forName="username">Username</label>
+                <input type="text" name="username" value={enteredName} onChange={nameHandler} />
+                <label forName="age">Age (Years)</label>
+                <input type="number" name="age" value={enteredAge} onChange={ageHandler} />
+                <Button type="submit">Add User</Button>
             </form>
             {errorMessage && <ErrorModal message={errorMessage} onClearForm={clearFormHandler} />}
         </Card>
