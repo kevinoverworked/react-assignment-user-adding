@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../UI/Button";
 import ErrorModal from "../Modal/ErrorModal";
-import styles from "./AddUser.module.css";
+import classes from "./AddUser.module.css";
 import Card from "../UI/Card";
 
 const AddUser = (props) => {
@@ -37,7 +37,7 @@ const AddUser = (props) => {
 
     const validateInputHandler = (event) => {
         event.preventDefault();
-        if (enteredName === "" || enteredAge === "") {
+        if (enteredName.trim() === "" || enteredAge.trim() === "") {
             setErrorMessage("Please enter a valid name and age (non-empty values).");
         } else if (isNaN(enteredAge) || parseInt(enteredAge, 10) < 0) {
             setErrorMessage("Please enter a valid age (> 0).");
@@ -47,7 +47,7 @@ const AddUser = (props) => {
     };
 
     return (
-        <Card className={styles.input}>
+        <Card className={classes.input}>
             <form onSubmit={validateInputHandler}>
                 <label htmlFor="username">Username</label>
                 <input type="text" name="username" value={enteredName} onChange={nameHandler} />
