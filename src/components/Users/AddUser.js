@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Button from "../UI/Button";
-import ErrorModal from "./ErrorModal";
+import ErrorModal from "../Modal/ErrorModal";
 import styles from "./AddUser.module.css";
-import Card from "../UI/Card.module.css";
+import Card from "../UI/Card";
 
 const AddUser = (props) => {
     const [enteredName, setEnteredName] = useState("");
@@ -47,7 +47,7 @@ const AddUser = (props) => {
     };
 
     return (
-        <div className={Card.card}>
+        <Card>
             <form onSubmit={validateInputHandler}>
                 <div className={styles.input}>
                     <label>Username</label>
@@ -60,7 +60,7 @@ const AddUser = (props) => {
                 <Button type="submit" label="Add User" />
             </form>
             {errorMessage && <ErrorModal message={errorMessage} onClearForm={clearFormHandler} />}
-        </div>
+        </Card>
         
     )
 };

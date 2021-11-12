@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Users from "./components/Users/Users";
-import AddUser from "./components/AddUser/AddUser";
+import AddUser from "./components/Users/AddUser";
 
 function App() {
     const [users, setUsers] = useState("");

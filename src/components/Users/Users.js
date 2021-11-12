@@ -1,13 +1,13 @@
 import React from "react";
 import UsersList from "./UsersList";
-import styles from "../UI/Card.module.css";
+import Card from "../UI/Card";
 
 const Users = (props) => {
     
     return (
-        <div className={styles.card}>
+        <Card>
             <UsersList data={props.data} />
-        </div>
+        </Card>
     )
     
 };
