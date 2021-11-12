@@ -25,6 +25,7 @@ const AddUser = (props) => {
         } else if (isNaN(enteredAge) || parseInt(enteredAge, 10) < 0) {
             setErrorMessage("Please enter a valid age (> 0).");
         } else {
+            clearFormHandler();
             props.onAddUser(enteredName, enteredAge);
         }
     };
