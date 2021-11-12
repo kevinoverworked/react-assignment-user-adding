@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../UI/Button";
+import Card from "../UI/Card";
 import classes from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
@@ -8,7 +9,7 @@ const ErrorModal = (props) => {
     };
 
     return (
-        <div>
+        <Card>
             <div className={classes.backdrop} onClick={buttonHandler}></div>
             <div className={classes.modal}>
                 <div className={classes.header}><h2>Invalid Input</h2></div>
@@ -21,7 +22,7 @@ const ErrorModal = (props) => {
                     <Button type="button" className={classes.actions} onClick={buttonHandler}>Okay</Button>
                 </div>
             </div>
-        </div>
+        </Card>
     );
 };
 
