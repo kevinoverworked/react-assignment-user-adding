@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Button from "../UI/Button";
 import ErrorModal from "../Modal/ErrorModal";
 import classes from "./AddUser.module.css";
@@ -47,16 +47,18 @@ const AddUser = (props) => {
     };
 
     return (
-        <Card className={classes.input}>
-            <form onSubmit={validateInputHandler}>
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" value={enteredName} onChange={nameHandler} />
-                <label htmlFor="age">Age (Years)</label>
-                <input type="number" name="age" value={enteredAge} onChange={ageHandler} />
-                <Button type="submit">Add User</Button>
-            </form>
+        <Fragment>
+            <Card className={classes.input}>
+                <form onSubmit={validateInputHandler}>
+                    <label htmlFor="username">Username</label>
+                    <input type="text" name="username" value={enteredName} onChange={nameHandler} />
+                    <label htmlFor="age">Age (Years)</label>
+                    <input type="number" name="age" value={enteredAge} onChange={ageHandler} />
+                    <Button type="submit">Add User</Button>
+                </form>
+            </Card>
             {errorMessage && <ErrorModal message={errorMessage} title="Invalid Input" buttonName="Okay" onClearForm={clearFormHandler} />}
-        </Card>
+        </Fragment>
         
     )
 };
