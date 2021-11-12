@@ -55,7 +55,7 @@ const AddUser = (props) => {
                 <input type="number" name="age" value={enteredAge} onChange={ageHandler} />
                 <Button type="submit">Add User</Button>
             </form>
-            {errorMessage && <ErrorModal message={errorMessage} onClearForm={clearFormHandler} />}
+            {errorMessage && <ErrorModal message={errorMessage} title="Invalid Input" buttonName="Okay" onClearForm={clearFormHandler} />}
         </Card>
         
     )
