@@ -3,7 +3,7 @@ import Users from "./components/Users/Users";
 import AddUser from "./components/Users/AddUser";
 
 function App() {
-    const [users, setUsers] = useState("");
+    const [users, setUsers] = useState([]);
 
     const setAddUser = (user) => {
         setUsers((prevUsers) => {
